@@ -47,9 +47,9 @@ def spiel():
 
     elif setzmethode == 2:
         if eingabe_farbe == "Schwarz" and x in schwarz:
-            print("Du hast gewonnen!", x, "ist schwarz)
+            print("Du hast gewonnen!", x, "ist schwarz")
         elif eingabe_farbe == "Rot" and x in rot:
-            print("Du hast gewonnen", x, "ist rot)
+            print("Du hast gewonnen", x, "ist rot")
         else:
             print("Du hast verloren", x, "ist nicht die Farbe, auf die du gesetzt hast")
 
