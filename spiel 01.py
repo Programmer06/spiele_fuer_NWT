@@ -107,7 +107,7 @@ def nehmen():
         messagebox.showwarning("Fehler", soviele)
 
 def bleiben():
-    while sum(dealer_gesamt) < 17:
+    while sum(dealer_gesamt) < 18:
         dealerzahl = random.choice(liste_Karten)
         liste_Karten.remove(dealerzahl)
         dealer_gesamt.append(dealerzahl)
