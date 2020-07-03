@@ -11,22 +11,22 @@ schwarz = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35]
 
 
 def spiel():
-    print("Wählen sie zwischen Reihe, Farbe und Zahl aus.")
+    print("Auf was willst du setzen? (Bitte gib entweder Farbe, Reihe oder Nummer ein) ")
     eingabe_methode = input()
 
     if eingabe_methode == "Reihe" :
-        print("Wollen sie auf die erste, zweite oder dritte Reihe setzen?")
+        print("Auf welche Reihe möchtest du setzen?(Bitte gib 1, 2, oder 3 ein)")
         eingabe_reihe = input()
         setzmethode = 1
 
 
     elif eingabe_methode == "Farbe" :
-        print("Wollen sie auf Rot oder Schwarz setzen ")
+        print("Auf welche Farbe möchtest du setzen? (Bitte gibt entweder Rot oder Schwarz ein) ")
         eingabe_farbe = input()
         setzmethode = 2
 
     elif eingabe_methode == "Zahl":
-        print("Auf welche Zahl wollen sie setzen")
+        print("Auf welche Zahl möchtest du setzen?")
         eingabe_zahl = input()
         setzmethode = 3
 
@@ -47,11 +47,11 @@ def spiel():
 
     elif setzmethode == 2:
         if eingabe_farbe == "Schwarz" and x in schwarz:
-            print("Du hast gewonnen!")
+            print("Du hast gewonnen!", x, "ist schwarz)
         elif eingabe_farbe == "Rot" and x in rot:
-            print("Du hast gewonnen")
+            print("Du hast gewonnen", x, "ist rot)
         else:
-            print("Du hast verloren")
+            print("Du hast verloren", x, "ist nicht die Farbe, auf die du gesetzt hast")
 
     elif setzmethode == 3:
         if eingabe_zahl == x:
@@ -59,14 +59,14 @@ def spiel():
         else:
             print("Du hast verloren! Die Zahl war", x )
 
-    print("Hast du auf noch eine Runde lust? WARNUNG! Kann süchtig machen ;)")
+    print("Möchtest du nochmal spielen?")
 
     janein = input()
 
     if janein == "ja" or janein == "Ja":
         spiel()
     else:
-        print("Ist vielleicht besser so für deine Gesundheit ;)")
+        print("Dann nicht.")
         time.sleep(3)
         exit()
 
