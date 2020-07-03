@@ -51,7 +51,7 @@ def spiel():
         elif eingabe_farbe == "Rot" and x in rot:
             print("Du hast gewonnen", x, "ist rot")
         else:
-            print("Du hast verloren", x, "ist nicht die Farbe, auf die du gesetzt hast")
+            print("Du hast verloren", x, "hat nicht die Farbe, auf die du gesetzt hast")
 
     elif setzmethode == 3:
         if eingabe_zahl == x:
